@@ -43,7 +43,6 @@ DELIMITER ;
 
 /*B)Procedure*/
 
-
 DROP PROCEDURE IF EXISTS misthos;
 DELIMITER $
 CREATE PROCEDURE misthos(IN ejrn VARCHAR(255),OUT newmi int)
