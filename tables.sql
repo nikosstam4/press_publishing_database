@@ -41,7 +41,6 @@ CREATE TABLE article(
   ON UPDATE CASCADE ON DELETE CASCADE
 ) engine=InnoDB;
 
-
 CREATE TABLE key(
   Article  VARCHAR(255) NOT NULL,
   Word_id VARCHAR(25) NOT NULL,
@@ -50,7 +49,6 @@ CREATE TABLE key(
   FOREIGN KEY(Article) REFERENCES article(Path)
   ON DELETE CASCADE ON UPDATE CASCADE
 ) engine=InnoDB;
-
 
 CREATE TABLE employee(
   Email  VARCHAR(255) NOT NULL,
@@ -64,7 +62,6 @@ CREATE TABLE employee(
   ON UPDATE CASCADE ON DELETE CASCADE
 ) engine=InnoDB;
 
-
 CREATE TABLE administrator(
   Email VARCHAR(255) NOT NULL,
   duties  ENUM('Secretary','Logistics') NOT NULL,
@@ -77,7 +74,6 @@ CREATE TABLE administrator(
   ON DELETE CASCADE ON UPDATE CASCADE
 ) engine=InnoDB;
 
-
 CREATE TABLE journalist(
   Email VARCHAR(255) NOT NULL,
   CV VARCHAR(255) NOT NULL,
@@ -87,7 +83,6 @@ CREATE TABLE journalist(
   FOREIGN KEY(Email) REFERENCES employee(Email)
   ON DELETE CASCADE ON UPDATE CASCADE
 ) engine=InnoDB;
-
 
 CREATE TABLE editor(
   Path VARCHAR(255) NOT NULL,
@@ -111,8 +106,6 @@ CREATE TABLE adm_phone_num(
   FOREIGN KEY(Administrative) REFERENCES administrator(Email)
   ON DELETE CASCADE ON UPDATE CASCADE
 ) engine=InnoDB;
-
-
 
 CREATE TABLE submited_by(
   Email VARCHAR(255) NOT NULL,
